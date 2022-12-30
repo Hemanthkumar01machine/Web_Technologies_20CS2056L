@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Company Registration Webpage</title>
+</head>
+
+<body>
+    <h3>Submit Your Resume</h3>
+    <form action="submit.php" method="get" autocomplete="on">
+        <fieldset style="width: fit-content;">
+            <legend>Personal Details</legend>
+            <table>
+                <tr>
+                    <td><label for="fname"><sup>*</sup>First Name:</label></td>
+                    <td><input type="text" name="fname" placeholder="Enter Your First Name" autofocus required></td>
+                </tr>
+                <tr>
+                    <td><label for="mname"><sup>*</sup>Middle Name:</label></td>
+                    <td><input type="text" name="mname" placeholder="Enter Your Middle Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="lname"><sup>*</sup>Last Name:</label></td>
+                    <td><input type="text" name="lname" placeholder="Enter Your Last Name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="dob">Date of Birth:</label></td>
+                    <td><input type="date" name="dob"></td>
+                </tr>
+                <tr>
+                    <td><label for="age"> Age in years:</label></td>
+                    <td><input type="number" min="18" max="30"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Gender: </label></td>
+                    <td><input type="radio" name="gender">Male
+                        <input type="radio" name="gender">Female</td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="range" value="20" name="r1" disabled><label for="r1">20% out of 100%</label>
+        <fieldset style="width: fit-content;">
+            <legend>Address Details</legend>
+            <table>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea name="address" id="" cols="40" rows="3"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="city/town">City/Town:</label></td>
+                    <td><input type="text" name="city/town"></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label></td>
+                    <td><select name="state" id="">
+                        <option value="Tamilnadu">Tamilnadu</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    </select></td>
+                </tr>
+                <tr>
+                    <td><label for="pin_code">Zip code:</label></td>
+                    <td><input type="number" maxlength="6" min="6" placeholder="only 6 numbers"></td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <input type="range" value="40" name="r2" disabled><label for="r2">40% out of 100%</label>
+        <fieldset style="width: fit-content;">
+            <legend>Contact Information</legend>
+            <table>
+                <tr>
+                    <td><label for="telephone">Telephone:</label></td>
+                    <td><input type="tel" name="telephone" placeholder="(044) 999-9999" pattern="[(044)]+[ ]+[0-9]{3}+[0-9]{4}"></td>
+                </tr>
+                <tr>
+                    <td><label for="mobile"><sup>*</sup>Mobile:</label></td>
+                    <td><input type="tel" name="mobile" placeholder="(+91) 99999-99999" pattern="[(+91)]+[ ]+[0-9]{5}+-+[0-9]{5},[0-9]{5}+-+[0-9]{5}"></td>
+                </tr>
+                <tr>
+                    <td><label for="kmail"><sup>*</sup>Kmail:</label></td>
+                    <td><input type="email" name="kmail" placeholder="Vaild Kmail" pattern="[a-z]+@karunya.edu.in$"></td>
+                </tr>
+                <tr>
+                    <td><label for="website">Website:</label></td>
+                    <td><input type="url" name="website" placeholder="Valid URL"></td>
+                </tr>
+            </table>
+
+        </fieldset>
+        <input type="range" value="60" name="r3" disabled><label for="r3">60% out of 100%</label>
+        <fieldset style="width:fit-content;">
+            <legend>Educational Details</legend>
+            <table border="1" style="border-collapse: collapse;">
+                <tr>
+                    <th>Qualification</th>
+                    <th>Board/University</th>
+                    <th>Country</th>
+                    <th>Starting Year</th>
+                    <th>Ending Year</th>
+                    <th>Percentage</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="10th" checked><label for="10th">10th</label></td>
+                    <td><input type="text" name="10th_b/u" placeholder="Board/university" size="15"></td>
+                    <td><select name="10th_c"><option value="india">India</option><option value="pakistan">Pakistan</option><option value="afganistan">Afganistan</option><option value="srilanka">Sri Lanka</option></select></td>
+                    <td><input type="date" name="10th_s"></td>
+                    <td><input type="date" name="10th_e"></td>
+                    <td align="center"><input type="number" min="0" max="100" width="20" name="10th_m" style="width: 50px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="12th" checked><label for="12th">12th</label></td>
+                    <td><input type="text" name="12th_b/u" placeholder="Board/university" size="15"></td>
+                    <td><select name="12th_c"><option value="india">India</option><option value="pakistan">Pakistan</option><option value="afganistan">Afganistan</option><option value="srilanka">Sri Lanka</option></select></td>
+                    <td><input type="date" name="12th_s"></td>
+                    <td><input type="date" name="12th_e"></td>
+                    <td align="center"><input type="number" min="0" max="100" width="20" name="12th_m" style="width: 50px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="b"><label for="b">B.Tech</label></td>
+                    <td><input type="text" name="b_b/u" placeholder="Board/university" size="15"></td>
+                    <td><select name="b_c"><option value="india">India</option><option value="pakistan">Pakistan</option><option value="afganistan">Afganistan</option><option value="srilanka">Sri Lanka</option></select></td>
+                    <td><input type="date" name="b_s"></td>
+                    <td><input type="date" name="b_e"></td>
+                    <td align="center"><input type="number" min="0" max="100" width="20" name="b_m" style="width: 50px;"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="m"><label for="m">M.Tech</label></td>
+                    <td><input type="text" name="m_b/u" placeholder="Board/university" size="15"></td>
+                    <td><select name="m_c"><option value="india">India</option><option value="pakistan">Pakistan</option><option value="afganistan">Afganistan</option><option value="srilanka">Sri Lanka</option></select></td>
+                    <td><input type="date" name="m_s"></td>
+                    <td><input type="date" name="m_e"></td>
+                    <td align="center"><input type="number" min="0" max="100" width="20" name="m_m" style="width: 50px;"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="range" value="80" name="r4" disabled><label for="r4">80% out of 100%</label>
+        <fieldset style="width: fit-content;">
+            <table>
+                <tr>
+                    <td>
+                        <p>Attach your resume in .doc or .pdf format</p>
+                    </td>
+                    <td><input type="file" accept="application/pdf,application/vnd.ms-word"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="confirmation" checked><label for="confirmation">I have Filled all the details</label></td>
+                </tr>
+            </table>
+        </fieldset>
+        <input type="range" value="100" name="r5" disabled><label for="r5">100% out of 100%</label>
+        <center><input type="submit"></center>
+    </form>
+</body>
+
+</html>
