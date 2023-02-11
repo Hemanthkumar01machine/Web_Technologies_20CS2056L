@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Animation</title>
+    <script src="Qn2_script.js"></script>
+    <style>
+        #wall {
+            display: inline-block;
+            width: 10px;
+            height: 210px;
+            background-color: aqua;
+            margin-left: 50px;
+        }
+        
+        #danger {
+            visibility: hidden;
+            background-color: red;
+            position: absolute;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: bolder;
+            color: white;
+            top: 50px;
+            left: 30px;
+        }
+        
+        img {
+            position: absolute;
+            left: 75%;
+            /*right: 970px;*/
+        }
+        
+        button {
+            position: relative;
+            border: 2px solid blue;
+            width: 13%;
+            padding: 1%;
+            margin: 1%;
+            top: 15px;
+            left: 25%;
+        }
+        
+        #btn_start {
+            background-color: blue;
+            color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div width="100%">
+            <div id="wall"></div>
+            <div id="danger">Danger</div>
+            <img src="Car.png" alt="Moving Car.png" width="250px" height="200px" id="car_image">
+        </div>
+        <form>
+            <button type="button" onclick="ftn(1)" id="btn_start">Start</button>
+            <button type="button" onclick="ftn(2)" id="btn_stop">Stop</button>
+            <button type="button" onclick="ftn(0)" id="btn_reset">Reset</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

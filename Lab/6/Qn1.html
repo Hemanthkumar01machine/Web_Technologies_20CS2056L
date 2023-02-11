@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Style Modification using JavaScript</title>
+    <script src="Qn1_script.js"></script>
+    <style>
+        #mydiv {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border: 5px solid blue;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+        #first {
+            width: 100%;
+        }
+        
+        #content {
+            padding-top: 45%;
+            padding-bottom: 45%;
+        }
+        
+        input {
+            margin: 1%;
+            padding: 2px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="first">
+        <div id="mydiv">
+            <div id="content">Welcome Text</div>
+        </div>
+
+        <form>
+            <label for="bgcolor_picker">Backgroud Color:</label>
+            <input type="color" id="bgcolor_picker" onchange="bg_color_ftn(value)"><br>
+
+            <label for="color_picker">Text Color: </label>
+            <input type="color" id="color_picker" onchange="color_ftn(value)"><br>
+
+            <label for="font_size">Text Size:</label>
+            <input type="number" id="font_size" onkeyup="txt_size_ftn(value)"><br>
+
+            <label for="box_width">Box Width:</label>
+            <input type="number" id="box_width" onkeyup="box_width_ftn(value)"><br>
+
+            <label for="box_height">Box Height:</label>
+            <input type="number" id="box_height" onkeyup="box_height_ftn(value)"><br>
+
+            <label for="box_border">Border Radius:</label>
+            <input type="range" id="box_border" onchange="box_border_ftn(value)">
+        </form>
+    </div>
+
+</body>
+
+</html>
