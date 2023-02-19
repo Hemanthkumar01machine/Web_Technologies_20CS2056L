@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Division Style Modification using JavaScript</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#bgcolor_picker").change(
+                function() {
+                    $("#mydiv").css({
+                        "background-color": $("#bgcolor_picker").val()
+                    });
+                }
+            );
+
+            $("#color_picker").change(
+                function() {
+                    $("#content").css({
+                        "color": $("#color_picker").val()
+                    });
+                }
+            );
+
+            $("#font_size").keyup(function() {
+                $("#content").css({
+                    "fontSize": $("#font_size").val() + "px"
+                });
+            });
+
+            $("#box_width").keyup(function() {
+                $("#mydiv").width($("#box_width").val());
+            });
+
+            $("#box_height").keyup(function() {
+                $("#mydiv").height($("#box_height").val());
+            });
+
+            $("#box_border").change(function() {
+                $("#mydiv").css({
+                    "border-radius": $("#box_border").val() + "px"
+                });
+            });
+
+            $("#show").click(function() {
+                $("#mydiv").show();
+            });
+
+            $("#hide").click(function() {
+                $("#mydiv").hide();
+            });
+
+            $("#toggle").click(function() {
+                $("#mydiv").toggle();
+            });
+
+            $("#fade_in").click(function() {
+                $("#mydiv").fadeIn("slow");
+            });
+
+            $("#fade_out").click(function() {
+                $("#mydiv").fadeOut("slow");
+            });
+
+            $("#fade_toggle").click(function() {
+                $("#mydiv").fadeToggle("slow");
+            });
+
+            $("#slide_up").click(function() {
+                $("#mydiv").slideUp("slow");
+            });
+
+            $("#slide_down").click(function() {
+                $("#mydiv").slideDown("slow");
+            });
+
+            $("#slide_toggle").click(function() {
+                $("#mydiv").slideToggle("slow");
+            });
+
+            $("#animate").click(function() {
+                $("#mydiv").animate({
+                    opacity: '0.5',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+
+        });
+    </script>
+    <style>
+        #mydiv {
+            background-color: yellow;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+            border: 5px solid blue;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        
+        #first {
+            width: 100%;
+        }
+        
+        #content {
+            padding-top: 45%;
+            padding-bottom: 45%;
+        }
+        
+        input {
+            margin: 1%;
+            padding: 2px
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="first">
+        <div id="mydiv">
+            <div id="content">Welcome Text</div>
+        </div>
+
+        <form>
+            <label for="bgcolor_picker">Backgroud Color:</label>
+            <input type="color" id="bgcolor_picker"><br>
+
+            <label for="color_picker">Text Color: </label>
+            <input type="color" id="color_picker"><br>
+
+            <label for="font_size">Text Size:</label>
+            <input type="number" id="font_size"><br>
+
+            <label for="box_width">Box Width:</label>
+            <input type="number" id="box_width"><br>
+
+            <label for="box_height">Box Height:</label>
+            <input type="number" id="box_height"><br>
+
+            <label for="box_border">Border Radius:</label>
+            <input type="range" id="box_border">
+
+            <div id="effects">
+                <h3>Effects</h3>
+                <button type="button" id="show">show</button>
+                <button type="button" id="hide">Hide</button>
+                <button type="button" id="toggle">Toggle</button><br><br>
+                <button type="button" id="fade_in">Fade In</button>
+                <button type="button" id="fade_out">Fade Out</button>
+                <button type="button" id="fade_toggle">Fade Toggle</button><br><br>
+                <button type="button" id="slide_up">Slide Up</button>
+                <button type="button" id="slide_down">Slide Down</button>
+                <button type="button" id="slide_toggle">Slide Toggle</button><br><br>
+                <button type="button" id="animate">Animate</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>

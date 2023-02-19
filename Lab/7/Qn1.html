@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="qwe.css" media="screen">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cake Order</title>
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#place").click(function() {
+                $("span").text("Rs. " + (Number($("#cc").val() * 300) + Number($("#bc").val() * 200) + Number($("#mc").val() * 250) + Number($("#bf").val() * 350)))
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="header">Cake Shop</div>
+    <div class="cake">
+        <center><img src="imgs/rainbow.jpg" alt="Color Cake"><br><label>Color Cake - Rs 300</label></center>
+    </div>
+    <div class="cake">
+        <center><img src="imgs/chocolate.jpg" alt="Brown Cake"><br><label>Brown Cake - Rs 200</label></div>
+    </center>
+    <div class="cake">
+        <center><img src="imgs/millky.jpg" alt="Milky Cake"><br><label>Milky Cake - Rs 250</label> </div>
+    </center>
+    <div class="cake">
+        <center><img src="imgs/blackforest.JPG" alt="Black forest Cake"><br><label>Black Forest Cake - Rs 350</label></div>
+    </center>
+    <div id="form">
+        <center>
+            <h2>Order Cake</h2>
+        </center><br><br>
+        <center>
+            <table>
+                <tr>
+                    <td>
+                        <label for="cc">Color cake(Quantity)</label><br>
+                        <input type="number" id="cc" /><br>
+                        <label for="bc"> Brown cake(Quantity)</label><br>
+                        <input type="number" id="bc" /><br>
+                        <label for="mc">Milky cake(Quantity)</label><br>
+                        <input type="number" id="mc" /><br>
+                        <label for="bf">Black Forest cake(Quantity)</label><br>
+                        <input type="number" id="bf" /><br>
+                        <button id="place">Place Order</button>
+                        <hr>
+                        <p id="pd">Purchase Order Bill</p>
+                        <p id="tp">Total Price:</p>
+                        <span></span>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</body>
+
+</html>

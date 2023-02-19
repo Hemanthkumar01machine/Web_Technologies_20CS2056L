@@ -1,0 +1,65 @@
+* {
+    margin: 0px;
+}
+
+.header {
+    color: white;
+    line-height: 70px;
+    text-align: center;
+    background-color: skyblue;
+    font-size: 50px;
+    top: 0;
+}
+
+.cake {
+    width: 24%;
+    display: inline-block;
+    margin-top: 0%;
+}
+
+img {
+    height: 150px;
+    width: 200px;
+}
+
+h2 {
+    color: blue;
+}
+
+button {
+    width: 103%;
+    background-color: rgb(126, 126, 219);
+    color: black;
+    padding: 14px 20px;
+    margin: 5px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input {
+    width: 250px;
+    color: red;
+}
+
+label {
+    color: darkmagenta;
+}
+
+#pd {
+    text-align: center;
+    color: green;
+    font-size: large;
+}
+
+#tp {
+    color: black;
+    background-color: greenyellow;
+    display: inline;
+    font-size: x-large;
+}
+
+span {
+    color: blueviolet;
+    font-size: larger;
+}

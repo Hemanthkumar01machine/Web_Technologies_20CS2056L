@@ -11,13 +11,9 @@
         function calculator() {
             var w = parseInt(document.getElementById("weight").value)
             var h = parseInt(document.getElementById("height").value)
-
             var bmi = (w / ((h / 100) * (h / 100)))
-
             var BMI = bmi.toFixed(1)
-
             document.getElementById("res").innerHTML = BMI
-
             if (BMI < 18.0) {
                 document.getElementById("results_div").innerHTML = "Underweight BMI"
             } else if (BMI > 18.0 && BMI < 25) {
@@ -49,9 +45,7 @@
                 <div id="results_div">Your BMI Displays here</div>
             </div>
         </div>
-
     </div>
-
 </body>
 
 </html>
