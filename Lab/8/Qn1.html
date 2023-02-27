@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payroll Calculation</title>
+    <script src="angular.js"></script>
+    <script>
+        var myEmpApp = angular.module("emp_payroll", []);
+        myEmpApp.controller("control1", function($scope) {
+            $scope.sal_cal = function() {
+                $scope.e_name = $scope.emp_name;
+                $scope.e_id = $scope.emp_id;
+                $scope.s_date = $scope.sal_date.substr(2);
+                $scope.gross_sal = Number($scope.basic_sal) + Number($scope.hra) + Number($scope.da);
+                var tax_amt;
+                if ($scope.gross_sal > 60000) {
+                    tax_amt = $scope.gross_sal * 0.15;
+                } else if ($scope.gross_sal > 40000) {
+                    tax_amt = $scope.gross_sal * 0.1;
+                } else if ($scope.gross_sal > 20000) {
+                    tax_amt = $scope.gross_sal * 0.05;
+                }
+                $scope.net_sal = $scope.gross_sal - tax_amt;
+                $scope.tax = tax_amt;
+            }
+
+        });
+    </script>
+</head>
+
+<body ng-app="emp_payroll">
+    <h2>Employee Payroll Calculator</h2>
+    <div ng-controller="control1">
+        <form>
+            <label for="emp_name">Employee Name:</label>
+            <input type="text" id="emp_name" ng-model="emp_name"><br>
+            <label for="emp_id">Employee ID:</label>
+            <input type="text" id="emp_id" ng-model="emp_id"><br>
+            <label for="sal_date">Salary Date:</label>
+            <input type="date" id="sal_date" ng-model="sal_date"><br>
+            <label for="basic_sal">Basic Salary:</label>
+            <input type="text" id="basic_sal" ng-model="basic_sal"><br>
+            <label for="hra">House Rent Allowance:</label>
+            <input type="text" id="hra" ng-model="hra"><br>
+            <label for="da">Dearness Allowance:</label>
+            <input type="text" id="da" ng-model="da"><br>
+
+            <button ng-click="sal_cal()" type="button">Calculate Salary</button>
+
+            <p>
+                <p class="tle">Employee Name</p><span>{{e_name}}</span>
+                <p class="tle">Employee ID</p><span>{{e_id}}</span>
+                <p class="tle">Salary Date</p><span>{{s_date}}</span>
+                <p class="tle">Gross Salary</p><span>Rs.{{gross_sal}}</span>
+                <p class="tle">Net Salary</p><span>Rs.{{net_sal}}</span>
+                <p class="tle">Tax Deducted</p><span>Rs.{{tax}}</span>
+            </p>
+        </form>
+        <h4>Salary Details</h4>
+
+    </div>
+
+</body>
+
+</html>
