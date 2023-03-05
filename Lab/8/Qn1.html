@@ -13,7 +13,7 @@
             $scope.sal_cal = function() {
                 $scope.e_name = $scope.emp_name;
                 $scope.e_id = $scope.emp_id;
-                $scope.s_date = $scope.sal_date.substr(2);
+                $scope.s_date = $scope.sal_date.getDate()+"/"+$scope.sal_date.getMonth()+"/"+$scope.sal_date.getFullYear();
                 $scope.gross_sal = Number($scope.basic_sal) + Number($scope.hra) + Number($scope.da);
                 var tax_amt;
                 if ($scope.gross_sal > 60000) {
@@ -29,6 +29,31 @@
 
         });
     </script>
+    <style>
+        label{
+            display: inline-block;
+            width: 150px;
+            color: blue;
+        }
+        input{
+            margin: 10px;
+            padding: 2px;
+            color: red;
+        }
+        h4{
+            margin-left: 100px;
+        }
+        .tle{
+            display: inline-block;
+            width: 120px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+        }
+        span{
+            padding-left: 5px;
+        }
+    </style>
 </head>
 
 <body ng-app="emp_payroll">
@@ -42,24 +67,23 @@
             <label for="sal_date">Salary Date:</label>
             <input type="date" id="sal_date" ng-model="sal_date"><br>
             <label for="basic_sal">Basic Salary:</label>
-            <input type="text" id="basic_sal" ng-model="basic_sal"><br>
-            <label for="hra">House Rent Allowance:</label>
-            <input type="text" id="hra" ng-model="hra"><br>
-            <label for="da">Dearness Allowance:</label>
-            <input type="text" id="da" ng-model="da"><br>
+            <input type="number" id="basic_sal" ng-model="basic_sal"><br>
+            <label for="hra">House Rent Allowance</label>
+            <input type="number" id="hra" ng-model="hra"><br>
+            <label for="da">Dearness Allowance</label>
+            <input type="number" id="da" ng-model="da"><br>
 
             <button ng-click="sal_cal()" type="button">Calculate Salary</button>
-
-            <p>
-                <p class="tle">Employee Name</p><span>{{e_name}}</span>
-                <p class="tle">Employee ID</p><span>{{e_id}}</span>
-                <p class="tle">Salary Date</p><span>{{s_date}}</span>
-                <p class="tle">Gross Salary</p><span>Rs.{{gross_sal}}</span>
-                <p class="tle">Net Salary</p><span>Rs.{{net_sal}}</span>
-                <p class="tle">Tax Deducted</p><span>Rs.{{tax}}</span>
-            </p>
         </form>
         <h4>Salary Details</h4>
+        <p>
+            <p class="tle">Employee Name</p><span>{{e_name}}</span><br>
+            <p class="tle">Employee ID</p><span>{{e_id}}</span><br>
+            <p class="tle">Salary Date</p><span>{{s_date}}</span><br>
+            <p class="tle">Gross Salary</p><span>Rs.{{gross_sal}}</span><br>
+            <p class="tle">Net Salary</p><span>Rs.{{net_sal}}</span><br>
+            <p class="tle">Tax Deducted</p><span>Rs.{{tax}}</span>
+        </p>
 
     </div>
 
